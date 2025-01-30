@@ -1,7 +1,10 @@
 FROM debian:latest
 
+# Install curl and other dependencies
 RUN apt update && apt install -y curl && \
+    apt install -y ca-certificates && \
     curl -fsSL https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o /usr/local/bin/cloudflared && \
     chmod +x /usr/local/bin/cloudflared
 
-CMD ["sleep", "infinity"]
+# Command to run when container starts
+CMD ["/usr/local/bin/cloudflared", "tunnel", "run", "supabase-tunnel"]
