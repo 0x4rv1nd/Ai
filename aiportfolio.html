@@ -8,11 +8,11 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f4f4f9;
       color: #333;
     }
     header {
-      background-color: #1a1a1a;
+      background-color: #111;
       color: #fff;
       text-align: center;
       padding: 2rem 1rem;
@@ -24,6 +24,7 @@
     header p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
+      color: #ccc;
     }
     section {
       padding: 2rem 1rem;
@@ -36,25 +37,30 @@
       margin-bottom: 1rem;
       color: #444;
     }
-    .projects, .skills {
+    .grid {
       display: grid;
       gap: 1.5rem;
     }
-    .project, .skill {
+    .card {
       background: #fff;
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-    .resume-box {
-      margin-top: 1.5rem;
-      background: #f0f0f0;
-      padding: 1rem;
-      border-radius: 5px;
+    .skills, .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      background: #e0e0e0;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
     }
     footer {
       text-align: center;
-      background: #1a1a1a;
+      background: #111;
       color: #ccc;
       padding: 1rem;
       font-size: 0.9rem;
@@ -64,56 +70,81 @@
 <body>
 
   <header>
-    <h1>Arvind</h1>
-    <p>AI Automation Engineer | Workflow Developer | Integration Specialist</p>
+    <h1>ARVIND</h1>
+    <p>AI Automation Engineer • Web Scraper • Workflow Creator</p>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>I’m a passionate Automation Engineer with experience building smart, efficient workflows using n8n, Python, FFmpeg, Supabase, and various APIs. I focus on solving repetitive problems with intelligent automation to save time and improve accuracy. I enjoy experimenting with tools and combining them to build real-world solutions.</p>
+    <p>
+      I design automation systems that connect APIs, extract insights, manage bookings, and deploy intelligent agents. With experience in tools like n8n, Supabase, and FFmpeg, I turn manual work into seamless flows for businesses and creators.
+    </p>
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Instagram Quote Video Bot</h3>
-        <p>Generates quote images from Telegram messages, overlays text using Python, adds audio with FFmpeg, and automates Instagram posting via n8n.</p>
+    <h2>Signature Workflows</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AutoFlowX</h3>
+        <p>A modular workflow engine that connects Telegram, Google Sheets, and Calendar to automate appointment scheduling and lead collection with instant developer alerts.</p>
       </div>
-      <div class="project">
-        <h3>Product Scraper + WooCommerce CSV Generator</h3>
-        <p>Scrapes product data and images from vendor sites, formats them into CSV and image folders, ready for import into WordPress WooCommerce.</p>
+      <div class="card">
+        <h3>ScrapePilot</h3>
+        <p>A product intelligence bot that scrapes e-commerce websites, extracts data, formats it for WooCommerce, and stores it with images for instant upload.</p>
       </div>
-      <div class="project">
-        <h3>Telegram Form Bot + Google Sheets Sync</h3>
-        <p>Automates lead collection using Telegram bot and updates Google Sheets in real-time, with Google Calendar scheduling and developer alerts via Telegram.</p>
+      <div class="card">
+        <h3>AgentMind</h3>
+        <p>AI-powered assistant that reads messages, understands context, selects background music, and creates visual quote reels using FFmpeg and Instagram automation.</p>
+      </div>
+      <div class="card">
+        <h3>FormForge</h3>
+        <p>Custom Google Form handler that stores user input in Sheets, syncs with CRM tools like Zoho, and sends real-time Slack notifications for new responses.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Skills</h2>
+    <h2>Skills & Tools</h2>
     <div class="skills">
-      <div class="skill">n8n (Workflow Automation)</div>
-      <div class="skill">Python (Scripting & APIs)</div>
-      <div class="skill">FFmpeg (Video Processing)</div>
-      <div class="skill">Supabase (Backend as a Service)</div>
-      <div class="skill">Telegram & Meta Bot APIs</div>
-      <div class="skill">Google Sheets & Calendar APIs</div>
-      <div class="skill">WordPress Automation</div>
+      <span class="tag">Web Scraping</span>
+      <span class="tag">RAG Agents</span>
+      <span class="tag">FFmpeg Automation</span>
+      <span class="tag">n8n / Zapier</span>
+      <span class="tag">Facebook Graph API</span>
+      <span class="tag">Google Sheets & Calendar API</span>
+      <span class="tag">Supabase</span>
+      <span class="tag">Apify</span>
+      <span class="tag">Custom Bots</span>
+      <span class="tag">Slack + Zoho Integration</span>
+      <span class="tag">Telegram Bots</span>
+      <span class="tag">Automation Scripting</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Unique Tools I Built</h2>
+    <div class="tools">
+      <span class="tag">AutoFlowX</span>
+      <span class="tag">ScrapePilot</span>
+      <span class="tag">AgentMind</span>
+      <span class="tag">FormForge</span>
+      <span class="tag">InstaPushFX</span>
+      <span class="tag">SheetBridge</span>
+      <span class="tag">DataPorter</span>
     </div>
   </section>
 
   <section>
     <h2>Resume</h2>
-    <div class="resume-box">
-      <p><strong>Short Bio:</strong></p>
-      <p>I’m an AI automation engineer with hands-on experience in developing smart, time-saving systems. I specialize in integrating tools like n8n, Python, FFmpeg, and APIs to streamline processes for content generation, data management, and app workflows. I’ve built Telegram bots, scrapers, automated content pipelines, and backend systems using Supabase — all with a focus on scalability and real-world impact.</p>
+    <div class="card">
+      <p><strong>Short Profile:</strong></p>
+      <p>AI Automation Engineer with a focus on scraping, agent-based logic, and task orchestration. I specialize in connecting APIs, automating routines, and designing no-code + low-code solutions tailored for scale and speed.</p>
+      <p><strong>Availability:</strong> Open to freelance, contract, or full-time roles.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025  All rights reserved.
+    &copy; 2025. • Powered by Code & Creativity
   </footer>
 
 </body>
